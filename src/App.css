@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    /* background-image: url(https://media4.giphy.com/media/3oEdv1GbekAakxXO8g/giphy.gif?cid=ecf05e47em2y96kvoo9n2cmkaj925ov06f9xwagws46bmgf7&rid=giphy.gif&ct=g); */
+    /* background-image: url(https://media1.giphy.com/media/gw3MROIiJp44tg0E/200w.webp?cid=ecf05e47klfvfz8ln1q4yqep7vozfbvj376azkljv3gfgi57&rid=200w.webp&ct=g);  */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.my-animation {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation-name: fadeAndSlideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  @keyframes fadeAndSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

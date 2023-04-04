@@ -1,0 +1,136 @@
+    .wrapper {
+      padding: 5rem;
+    }
+
+    .about-Vulnerability-left{
+      /* background-color: greenyellow; */
+      border-bottom: 1px solid rgb(31, 255, 6);
+      border-left: 1px solid rgb(31, 255, 6);
+      padding: 20px!important;
+      margin: 10px;
+      border-radius: 20px;
+      transform: translate(-3rem, -3rem) !important;
+    }
+    
+    .about-Vulnerability-h4{
+      padding: 20px!important;
+      margin: 10px;
+      border-radius: 20px;
+    }
+
+    .Vulnerability-example{
+      padding: 20px!important;
+      margin: 10px;
+      border-radius: 20px;   
+      transform: translateX(10rem);
+    }
+    
+    .params-container{
+      transform: translate(2rem, 0);
+    }
+    .request-container {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .response-container {
+      flex: 1;
+      /* margin-left: 10rem; */
+      transform: translate(10rem, 0);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      color: #333;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      background-color: #0077cc;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+
+    .error {
+      background-color: #ff3333;
+      color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    .response {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      white-space: pre-wrap;
+      background-color: #eee;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 3px;
+      font-size: 14px;
+      overflow-x: auto;
+      margin-top: 25px;
+      margin-left: 40px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .api-playground {
+        width: 95%;
+        flex-direction: column;
+      }
+
+      .request-container,
+      .response-container {
+        padding: 10px;
+        margin-right: 0;
+        margin-left: 50px;
+      }
+    }
