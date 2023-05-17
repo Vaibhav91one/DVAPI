@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { ArrowForwardIosRounded } from '@mui/icons-material';
 import './Card.css';
 
-export default function ActionCard({ title, description, imageurl }) {
+export default function ActionCard({ title, description, number, imageurl , url, writeup}) {
 
   const [hovered, setHovered] = useState(false);
 
@@ -48,7 +48,7 @@ export default function ActionCard({ title, description, imageurl }) {
     border: '.5px solid #5cf3d055',
     backgroundColor: 'black',
     transition: ' .5s  ease-in-out ',
-    
+
   };
   const styles = {
     text: {
@@ -56,37 +56,41 @@ export default function ActionCard({ title, description, imageurl }) {
       padding: '10px',
       paddingTop: '-10px',
       margin: '10px',
+    },
+    redirect: {
+      textDecoration: 'none',
     }
   };
 
   return (
-    <Card style={card} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{ maxWidth: 345 }} >
-      <CardActionArea>
-        <CardMedia
+    < Link to="/playground" style={styles.redirect} state={{ main: title, main2: description, main3: number, main4: url, main5: writeup}} >
 
-          component="img"
-          height="140"
-          image={imageurl}
-          alt="OWASP TOP 10"
-        />
-        <CardContent>
-          <Typography   gutterBottom variant="h5" component="div">
-            <h5 className='Title' style={styles.text} > {title} </h5> 
-          </Typography>
-          <Typography style={styles.text} className='Description' variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-          < Link to="/playground" state={{ url1: "Sample url" }} >
-            <Typography align='center'>
-              <button variant="text"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  style={btn} >
+      <Card style={card} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} sx={{ maxWidth: 345 }} >
+        <CardActionArea>
+          <CardMedia
+
+            component="img"
+            height="140"
+            image={imageurl}
+            alt="OWASP TOP 10"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              <h5 className='Title' style={styles.text} > {title} </h5>
+            </Typography>
+            <Typography style={styles.text} className='Description' variant="body2" color="text.secondary">
+              {description}
+            </Typography>
+            {/* <Typography align='center'>
+              <button variant="text" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={btn} >
                 Let's Go
               </button>
-            </Typography>
-          </Link>
+            </Typography> */}
 
-        </CardContent>
-      </CardActionArea>
-    </Card>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Link>
 
 
 

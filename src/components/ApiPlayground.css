@@ -1,136 +1,178 @@
-    .wrapper {
+    .wrapper{
       padding: 5rem;
     }
 
-    .about-Vulnerability-left{
+    .about-Vulnerability-left {
       /* background-color: greenyellow; */
-      border-bottom: 1px solid rgb(31, 255, 6);
-      border-left: 1px solid rgb(31, 255, 6);
-      padding: 20px!important;
+      border-right: 3px solid rgb(31, 255, 6);
+      border-left: 3px solid rgb(31, 255, 6);
+      padding: 20px !important;
       margin: 10px;
+      text-align: center;
       border-radius: 20px;
       transform: translate(-3rem, -3rem) !important;
+      text-shadow: 2px 2px 14px #2AFF05;
+
     }
-    
-    .about-Vulnerability-h4{
-      padding: 20px!important;
+
+    .about-Vulnerability-left:hover {
+      box-shadow: -4px -5px 66px 1px rgba(234, 241, 27, .2);
+      text-shadow: 3px 2px 14px rgb(234, 241, 27);
+      border-right: 3px solid #eaf11b;
+      border-left: 3px solid #eaf11b;
+      scale: 1.01;
+      color: #eaf11b;
+    }
+
+    .about-Vulnerability-h4 {
+      padding: 20px !important;
       margin: 10px;
       border-radius: 20px;
-    }
+      /* background: rgba(242, 237, 237, 0.2); */
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      font-family:sans-serif;    
+      line-height: 20px;
+    }  
+    
+   
 
-    .Vulnerability-example{
-      padding: 20px!important;
+    .Vulnerability-example {
+      padding: 20px !important;
       margin: 10px;
-      border-radius: 20px;   
+      border-radius: 20px;
       transform: translateX(10rem);
     }
-    
-    .params-container{
-      transform: translate(2rem, 0);
-    }
-    .request-container {
-      flex: 1;
-      margin-right: 20px;
-    }
 
-    .response-container {
-      flex: 1;
-      /* margin-left: 10rem; */
-      transform: translate(10rem, 0);
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .form {
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      justify-content: center;
-      align-items: center;
-
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 16px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 3px;
-      font-size: 16px;
-      color: #333;
-      background-color: #fff;
-      margin: 5px 0;
-    }
-
-    textarea {
-      min-height: 100px;
-    }
-
+    .Vulnerability-example h2,
+    h5,
     button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      background-color: #0077cc;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    button:disabled {
-      background-color: #999;
-      cursor: not-allowed;
-    }
-
-    .error {
-      background-color: #ff3333;
-      color: #fff;
       padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 3px;
-      font-size: 16px;
+    }
+    
+    .Vulnerability-example p{
+      color: white;
     }
 
-    .response {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      white-space: pre-wrap;
-      background-color: #eee;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 3px;
-      font-size: 14px;
-      overflow-x: auto;
-      margin-top: 25px;
-      margin-left: 40px;
+    .Vulnerability-example button:hover{
+      box-shadow: none;
     }
 
-    @media only screen and (max-width: 600px) {
-      .api-playground {
-        width: 95%;
-        flex-direction: column;
+    .Vulnerability-example h2 {
+      border-radius: 20px;
+      text-shadow: 2px 2px 14px #20b6a7;
+    }
+
+
+  .back-btn{
+    margin:1rem;
+    padding: 1rem;
+  }
+
+    .wrapper {
+      opacity: 0;
+      transform: translateY(-10px);
+      animation-name: fadeAndSlideIn;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      transition: all .5s ease-in-out;
+    }
+
+    .btn-check {
+      text-decoration: none;
+      border: .5px solid white;
+      transition: .5s ease-in-out;
+      background-color: black;
+      color: white;
+      font-family: 'Inconsolata', monospace;
+    }
+
+    .btn-check:hover {
+      box-shadow: 20px 10px 192px 11px rgb(174, 36, 213);
+      transition: .5s ease-in-out;
+      scale: 1.1;
+      /* border: .5px solid rgba(198, 38, 211, 0.8); */
+    }
+
+    .btn-check-1{
+      text-decoration: none;
+      border: .5px solid rgb(7, 7, 7);
+      transition: .5s ease-in-out;
+      background-color: black;
+      color: white;
+      font-family: 'Inconsolata', monospace;
+      margin: 10px;
+      border-radius: 10px;
+      margin-top: 5rem;
+    }
+
+    .btn-check-1 p{
+      text-align: center;
+      padding: 4px;
+      padding-top: 20px;
+    }
+    
+    .submit-flag{
+     display: flex;
+     align-items: center;
+     justify-content: center; 
+     padding: 10px;
+     margin: 1rem;
+     border-radius: 10px;
+    }
+
+    .submit-flag input{
+      background-color: black;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid white;
+    }
+
+    .submit-flag button{
+      border: none;
+      border-radius: 20px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      scale: 1;
+    }
+
+    .submit-flag button:hover{
+      box-shadow: none;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      scale: 1;
+
+    }
+  
+
+
+    .btn-check-1:hover, .btn-check-1:focus{
+      box-shadow: 0 0.5em 0.5em -0.4em rgb(161, 43, 43);
+      transition: .5s ease-in-out;
+      transform: translateY(-0.25em);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .btn-check-1 p:hover{
+      color: red;
+      cursor: pointer;
+    }
+
+
+
+    @keyframes fadeAndSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(1rem);
       }
 
-      .request-container,
-      .response-container {
-        padding: 10px;
-        margin-right: 0;
-        margin-left: 50px;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }

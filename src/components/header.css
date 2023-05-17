@@ -1,0 +1,11 @@
+.wrapper{
+    padding: 0rem  6rem;
+    /* margin: 1rem; */
+    margin-left: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+    margin-left: 0rem;
+    }
+}

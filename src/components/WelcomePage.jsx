@@ -70,6 +70,7 @@ function WelcomePage() {
 
     const labelStyles = {
         marginBottom: '0.5rem',
+        width: "100%"
     };
 
     const inputStyles = {
@@ -78,7 +79,9 @@ function WelcomePage() {
         border: '1px solid #ccc',
         borderRadius: '4px',
         width: '100%',
+        color: "black"
     };
+
 
     const textareaStyles = {
         marginBottom: '1rem',
@@ -87,6 +90,7 @@ function WelcomePage() {
         borderRadius: '4px',
         width: '100%',
         minHeight: '200px',
+        color: "black"
 
     };
 
@@ -111,7 +115,6 @@ function WelcomePage() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log("Sent");
     }
 
     return (
@@ -125,7 +128,7 @@ function WelcomePage() {
                         <div className="header-right">
                             <a className="contact-link" onClick={() => scrollToSection(aboutRef.current)}>About</a>
                             <a className="contact-link" onClick={() => scrollToSection(contactRef.current)}>Contact</a>
-                            <a className="social-link">Github</a>
+                            <a className="social-link"href="https://github.com/Vaibhav91one/DVAPI" target='_blank'>Github</a>
                         </div>
                     </div>
                 </header>
@@ -133,12 +136,12 @@ function WelcomePage() {
                     <div className="welcome">
                         <h1>Welcome to DVAPI</h1>
                         <p>"Unlock the full potential of your APIs with peace of mind - Welcome to DVAPI, where security is our top priority."</p>
-                        < Link to="/DVAPI">
-                            <button>Get Started</button>
+                        < Link to="/DVAPI" >
+                            <button >Get Started</button>
                         </Link>
-                        <button onClick={() => scrollToSection(aboutRef.current)}> About DVAPI </button>
+                        <button className='btn-dvapi' onClick={() => scrollToSection(aboutRef.current)}> About DVAPI </button>
                     </div>
-                    <ScrollAnimation animateIn="fadeIn" delay='1'>
+                    <ScrollAnimation animateIn="fadeIn" delay='0'>
                         <div ref={aboutRef} className="about">
                             <h2>About DVAPI</h2>
                             <ul >
